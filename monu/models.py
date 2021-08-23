@@ -21,7 +21,7 @@ class Vehicle(models.Model):
 class Service(models.Model):
 
     vehicle_id = models.ForeignKey(Vehicle, on_delete=models.PROTECT)
-    students_id = models.ManyToManyField(Student, blank=True)
+    students_id = models.ManyToManyField(Student)
     date = models.DateField()
     time = models.TimeField()
     address = models.CharField(max_length=255)
